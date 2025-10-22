@@ -116,12 +116,12 @@ export function LandingPage() {
 
             <Link to="/the-golem" className="group relative overflow-hidden aspect-[4/5]">
               <img
-                src="https://images.unsplash.com/photo-1689561524442-18f58efcab22?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxnb2xlbSUyMHNjdWxwdHVyZXxlbnwxfHx8fDE3NjAzMDU0MDd8MA&ixlib=rb-4.1.0&q=80&w=1080"
+                src="/images/golemtextposter.jpg"
                 alt="The Golem"
                 className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black via-black/50 to-transparent flex items-end p-6">
-                <h3 className="serif-font text-2xl">The Golem</h3>
+                {/* Intentionally left blank to remove visible link text */}
               </div>
             </Link>
 

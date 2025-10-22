@@ -1,61 +1,35 @@
 import { MapPin, Calendar } from 'lucide-react';
 import { ImageWithFallback } from './figma/ImageWithFallback';
+import { Link } from 'react-router-dom';
 
 export function JewishMuseum() {
   const projects = [
     {
       id: 1,
-      title: 'Voices of Memory',
+      title: 'The Rebbitzen Project',
       year: '2023',
       location: 'Main Exhibition Hall',
-      description: 'An intimate documentary series capturing oral histories from Holocaust survivors and their descendants, preserving stories for future generations.',
+      description: "Since so much of the museum's collection represents the duties of men and boys, yet so much of daily life is made possible by women, I took on the responsibility of showing a holistic picture of Jewish life. Exhibited in their permanent collection alongside objects pertaining to Rabbis, The Jewish Museum will showcase my portraits of Rebbitzins and the blurb created describing their personal role and contributions to their community.",
       image: 'https://images.unsplash.com/photo-1562064729-6c3f058785fd?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtdXNldW0lMjBleGhpYml0aW9ufGVufDF8fHx8MTc2MDI0NjI4Nnww&ixlib=rb-4.1.0&q=80&w=1080',
-      category: 'Documentary Series',
+      category: 'Project',
     },
     {
       id: 2,
-      title: 'Artifacts of Faith',
+      title: 'Forgotten Jewish Villages of Alsace',
       year: '2023',
-      location: 'Permanent Collection',
-      description: 'Cinematic documentation of sacred objects and their stories, exploring the material culture of Jewish life in Switzerland.',
+      location: 'Research & Archive',
+      description: 'Together with two specialists in the history of rural Judaism, my time at the museum was spent documenting the traces of Jewish rural life in the 18th and 19th centuries in Alsace.',
       image: 'https://images.unsplash.com/photo-1594165808659-fe20f963ab53?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxoaXN0b3JpY2FsJTIwYXJ0aWZhY3RzfGVufDF8fHx8MTc2MDMwNTU1OHww&ixlib=rb-4.1.0&q=80&w=1080',
-      category: 'Cultural Documentation',
+      category: 'Research',
     },
     {
       id: 3,
-      title: 'Architecture of Heritage',
-      year: '2022',
-      location: 'Special Exhibition',
-      description: 'Visual exploration of synagogue architecture across Switzerland, from historic preservation to contemporary design.',
-      image: 'https://images.unsplash.com/photo-1720052473937-858c68dd0783?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxqZXdpc2glMjBzeW5hZ29ndWUlMjBpbnRlcmlvcnxlbnwxfHx8fDE3NjAzMDU0MDl8MA&ixlib=rb-4.1.0&q=80&w=1080',
-      category: 'Architectural Film',
-    },
-    {
-      id: 4,
-      title: 'Community Portraits',
-      year: '2024',
-      location: 'Contemporary Gallery',
-      description: 'A portrait series celebrating the diversity and vitality of Jewish communities in Basel and beyond.',
-      image: 'https://images.unsplash.com/photo-1663043188237-01565028db93?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxkb2N1bWVudGFyeSUyMHBob3RvZ3JhcGh5fGVufDF8fHx8MTc2MDMwNTU1OXww&ixlib=rb-4.1.0&q=80&w=1080',
-      category: 'Portrait Series',
-    },
-    {
-      id: 5,
-      title: 'Exhibition Installation',
+      title: 'Jewish Museum Promotional Video',
       year: '2023',
-      location: 'Rotating Gallery',
-      description: 'Time-lapse and behind-the-scenes documentation of major exhibition installations, revealing the curatorial process.',
-      image: 'https://images.unsplash.com/photo-1722239150558-25cf7731732b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtdXNldW0lMjBhcnR3b3JrJTIwZGlzcGxheXxlbnwxfHx8fDE3NjAzMDU1NTd8MA&ixlib=rb-4.1.0&q=80&w=1080',
-      category: 'Process Documentation',
-    },
-    {
-      id: 6,
-      title: 'Light and Shadow',
-      year: '2024',
-      location: 'Contemporary Wing',
-      description: 'An artistic exploration of museum spaces through light, shadow, and architectural form, creating a meditation on memory and presence.',
-      image: 'https://images.unsplash.com/photo-1641348653749-5e3429a72429?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxhcnQlMjBnYWxsZXJ5JTIwbGlnaHRpbmd8ZW58MXx8fHwxNzYwMzA1NTU5fDA&ixlib=rb-4.1.0&q=80&w=1080',
-      category: 'Artistic Film',
+      location: 'Media & Outreach',
+      description: 'Planned and produced a promotional video for the museum\'s new space to update museum visitors and donors. https://www.youtube.com/watch?v=ny5VUeFSGLQ',
+      image: 'https://images.unsplash.com/photo-1720052473937-858c68dd0783?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxqZXdpc2glMjBzeW5hZ29ndWUlMjBpbnRlcmlvcnxlbnwxfHx8fDE3NjAzMDU0MDl8MA&ixlib=rb-4.1.0&q=80&w=1080',
+      category: 'Media',
     },
   ];
 
@@ -84,10 +58,7 @@ export function JewishMuseum() {
       <section className="py-16 px-6 bg-zinc-950">
         <div className="container mx-auto max-w-4xl text-center">
           <p className="text-lg text-white/70 leading-relaxed">
-            Since 2022, I have had the privilege of collaborating with the Jewish Museum of Switzerland 
-            to create visual documentation that preserves and celebrates Jewish heritage, culture, and community. 
-            These projects span documentary filmmaking, exhibition photography, and artistic interpretations 
-            of museum spaces and collections.
+            Besides carrying out regular internship work, photographing the architecture, events and items in the collection, Aline Chalfin took on three projects which required considerable organizational and social skills:
           </p>
         </div>
       </section>
@@ -131,9 +102,18 @@ export function JewishMuseum() {
                   <p className="text-lg text-white/70 leading-relaxed mb-6">
                     {project.description}
                   </p>
-                  <button className="px-6 py-2 border border-white/30 hover:bg-white hover:text-black transition-colors tracking-wider">
-                    View Project
-                  </button>
+                  {project.title === 'The Rebbitzen Project' ? (
+                    <Link
+                      to="/rebbitzen"
+                      className="inline-block px-6 py-2 border border-white/30 hover:bg-white hover:text-black transition-colors tracking-wider"
+                    >
+                      View Project
+                    </Link>
+                  ) : (
+                    <button className="px-6 py-2 border border-white/30 hover:bg-white hover:text-black transition-colors tracking-wider">
+                      View Project
+                    </button>
+                  )}
                 </div>
               </div>
             ))}
@@ -167,14 +147,8 @@ export function JewishMuseum() {
         <div className="container mx-auto max-w-4xl text-center">
           <blockquote className="mb-8">
             <p className="elegant-font text-2xl md:text-3xl text-white/80 leading-relaxed mb-8">
-              "Aline's work captures not just images, but the soul of our institution and the stories 
-              we preserve. Her sensitive approach to documenting Jewish heritage has created an invaluable 
-              archive for future generations."
+              “Aline Chalfin was an unforgettable intern. She was hugely motivated to learn all facets of Jewish cultural life in Switzerland and museum work in particular. Her social skills are outstanding. She immediately gained my trust and that of the employees and made meaningful friendships with people of all ages within and outside of the museum. Despite not speaking Swiss German, she was approachable, courteous, flexible, friendly and helpful. She brought creativity and good ideas to the team, but also hard work and attention to detail. I am sure that her talent, her enthusiasm and energy will pave her an outstanding career.”
             </p>
-            <footer className="text-white/60">
-              <p>— Dr. Gabrielle Rosenstein</p>
-              <p className="text-sm">Director, Jewish Museum of Switzerland</p>
-            </footer>
           </blockquote>
         </div>
       </section>

@@ -26,41 +26,10 @@ export function TheGolem() {
     '/images/still6.jpg',
   ];
 
-  const headshotSlides = ['/images/b5bfc1f9a7-headshot.jpg'];
-  const crewSlides = ['/images/crew.jpg'];
-  const crewCredits = [
-    'Directed by',
-    'Aline Chalfin',
-    'Spencer Linn',
-    'Director of Photography: Aydan Metsch',
-    'Ami: Adam Rydl',
-    'Rabbi: Bogomil Shopov',
-    'Extras: Barry Evans, Emmet Kneafsey, James Hillefeld, Steven Burgess, Graham Hazleton',
-    'Producer: Tamara Hajičková',
-    'Production Manager: Jiřina Chytilová',
-    '1st AD: Zipporah Fornah',
-    'Art Director: Maya Giurgi',
-    '1st AC: Joe Sato Murphy',
-    '2nd AC: Nic Hatton',
-    'Camera Supervisor: Riyana Lama',
-    'Gaffer: JP Tehamlik',
-    'Grip: Emmet Kneafske',
-    'Gaffer Assistant: James Hellefeld',
-    'Sound: Morgan Andrade',
-    'Boom Operator: Talya Dersu',
-    'Continuity: Graham Hazleton',
-    'Make-up Artist: Evie Rhody',
-    '1st PA: Emma Szumowská',
-    '2nd PA: Michaella Brollová',
-    'Behind-the-Scenes Photography: Steven Burgess, Elmira & Duarte / FAMU INTERNATIONAL',
-  ];
-
   const [open, setOpen] = useState(false);
   const [index, setIndex] = useState(0);
   const [stillsOpen, setStillsOpen] = useState(false);
   const [stillsIndex, setStillsIndex] = useState(0);
-  const [headshotOpen, setHeadshotOpen] = useState(false);
-  const [crewOpen, setCrewOpen] = useState(false);
 
   return (
     <div className="min-h-screen bg-black text-white pt-20">
@@ -79,7 +48,7 @@ export function TheGolem() {
             src="/images/golem.png"
             alt="The Golem Logo"
             className="mx-auto mb-6"
-            style={{ width: '700px', height: 'auto' }}
+            style={{ width: '80px', height: 'auto' }}
           />
           <p className="text-xl text-white/70 max-w-3xl mx-auto mb-8">
             In 17th century Prague, a young boy facing persecution seeks help by reviving the ancient legend of the Golem
@@ -161,56 +130,70 @@ export function TheGolem() {
         </div>
       </section>
 
-      {/* Meet the Creators & Meet the Crew Section */}
-      <section className="py-24 px-6 bg-zinc-950">
-        <div className="container mx-auto max-w-7xl">
-          <div className="grid md:grid-cols-2 gap-12">
-            {/* Meet the Creators */}
-            <div>
-              <h2 className="serif-font text-4xl mb-8">Meet the Creators</h2>
-              <div className="grid md:grid-cols-2 gap-6">
-                <div className="aspect-[3/4] overflow-hidden">
-                  <button type="button" onClick={() => setHeadshotOpen(true)} className="block w-full h-full">
-                    <ImageWithFallback
-                      src="/images/b5bfc1f9a7-headshot.jpg"
-                      alt="Film creators"
-                      className="w-full h-full object-cover"
-                    />
-                  </button>
-                </div>
-                <div className="flex flex-col justify-center">
-                  <p className="text-lg text-white/70 mb-2">Aline Frances Chalfin</p>
-                  <p className="text-lg text-white/70 mb-2">Spencer Linn</p>
-                  <p className="text-lg text-white/70">Aydan Metsch</p>
-                </div>
-              </div>
-            </div>
+{/* Meet the Creators */}
+                  <section className="py-24 px-6 bg-black">
+                    <div className="container mx-auto max-w-6xl">
+                      <div className="flex items-center gap-3 mb-12">
+                        <Camera className="text-white/60" size={32} />
+                        <h2 className="serif-font text-4xl">Meet the Creators</h2>
+                      </div>
 
-            {/* Meet the Crew */}
-            <div>
-              <h2 className="serif-font text-4xl mb-8">Meet the Crew</h2>
-              <div className="grid md:grid-cols-2 gap-6">
-                <div className="aspect-[3/4] overflow-hidden">
-                  <button type="button" onClick={() => setCrewOpen(true)} className="block w-full h-full">
-                    <ImageWithFallback
-                      src="/images/crew.jpg"
-                      alt="Film crew"
-                      className="w-full h-full object-cover"
-                    />
-                  </button>
-                </div>
-                <div className="flex flex-col justify-center">
-                  <div className="text-sm text-white/70 break-words text-[13px] leading-snug max-h-48 overflow-y-auto space-y-1">
-                    {crewCredits.map((line, i) => (
-                      <p key={i}>{line}</p>
-                    ))}
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+                      <div className="grid grid-cols-1 md:grid-cols-3 gap-6 items-start">
+                        <div className="md:col-span-1">
+                          <ImageWithFallback
+                            src="/images/b5bfc1f9a7-headshot.jpg"
+                            alt="Headshot"
+                            className="w-full h-full object-cover rounded-md"
+                          />
+                        </div>
+
+                        <div className="md:col-span-1 space-y-3">
+                          <p className="text-lg text-white/70">Aline Frances Chalfin</p>
+                          <p className="text-lg text-white/70">Aydan Metsch</p>
+                          <p className="text-lg text-white/70">Spencer Linn</p>
+                        </div>
+
+                        <div className="md:col-span-1">
+                          <div className="p-6 bg-zinc-900 border border-white/10 rounded-md">
+                            <h3 className="serif-font text-2xl mb-4">Meet the Crew</h3>
+                            <div className="grid grid-cols-1 gap-4 items-start">
+                              <ImageWithFallback
+                                src="/images/crew.jpg"
+                                alt="Crew"
+                                className="w-full h-auto object-cover rounded-md mb-4"
+                              />
+                              <pre className="text-sm text-white/70 whitespace-pre-wrap text-[13px] leading-snug">
+            Directed by
+            Aline Chalfin
+            Spencer Linn
+            Director of Photography: Aydan Metsch
+            Ami: Adam Rydl
+            Rabbi: Bogomil Shopov
+            Extras: Barry Evans, Emmet Kneafsey, James Hillefeld, Steven Burgess, Graham Hazleton
+            Producer: Tamara Hajičková
+            Production Manager: Jiřina Chytilová
+            1st AD: Zipporah Fornah
+            Art Director: Maya Giurgi
+            1st AC: Joe Sato Murphy
+            2nd AC: Nic Hatton
+            Camera Supervisor: Riyana Lama
+            Gaffer: JP Tehamlik
+            Grip: Emmet Kneafsey
+            Gaffer Assistant: James Hillefeld
+            Sound: Morgan Andrade
+            Boom Operator: Talya Dersu
+            Continuity: Graham Hazleton
+            Make-up Artist: Evie Rhody
+            1st PA: Emma Szumowská
+            2nd PA: Michaella Brollová
+            Behind-the-Scenes Photography: Steven Burgess, Elmira & Duarte / FAMU INTERNATIONAL
+                              </pre>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </section>
 
       {/* Script Development Section */}
       <section className="py-24 px-6 bg-black">
@@ -279,19 +262,6 @@ export function TheGolem() {
           </div>
         </div>
       </section>
-      <Lightbox
-        open={headshotOpen}
-        close={() => setHeadshotOpen(false)}
-        index={0}
-        slides={headshotSlides.map((s) => ({ src: s }))}
-      />
-
-      <Lightbox
-        open={crewOpen}
-        close={() => setCrewOpen(false)}
-        index={0}
-        slides={crewSlides.map((s) => ({ src: s }))}
-      />
     </div>
   );
 }
